@@ -1,8 +1,9 @@
+import Link from "next/link";
 import React from "react";
 
 const ProjectCard = ({ heading, description, image, link }) => {
   return (
-    <a
+    <Link
       href={link}
       target="_blank"
       rel="noopener noreferrer"
@@ -13,7 +14,7 @@ const ProjectCard = ({ heading, description, image, link }) => {
         <h2>{heading}</h2>
         <div>{description}</div>
       </div>
-    </a>
+    </Link>
   );
 };
 

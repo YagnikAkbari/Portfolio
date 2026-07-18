@@ -1,5 +1,6 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+@import "tailwindcss";
 
 :root {
   --light-color: #fff;
@@ -95,11 +96,11 @@ a {
 .section__heading::after {
   content: "";
   display: inline-block;
-  border: 2px solid var(--primary-color);
-  width: 0;
-  height: 2.2rem;
+  background-color: var(--primary-color);
+  width: 3rem;
+  height: 4px;
   vertical-align: middle;
-  filter: blur(2px);
+  filter: blur(1.5px);
 }
 
 .section__heading::before {
@@ -162,32 +163,6 @@ a {
   color: var(--primary-color);
 }
 
-.contact-info-header {
-  margin-top: 2rem;
-}
-
-.contact-info-header > * {
-  cursor: pointer;
-  display: flex;
-  margin: 0 1rem;
-}
-
-.contact-info-header a {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.contact-info-header a p {
-  color: var(--dark-color);
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-  margin-left: 0.65rem;
-}
-
-.contact-info-header a .small-icon {
-  color: var(--primary-color);
-}
 
 .navbar-options-wrapper {
   border-bottom: 2px solid var(--secondary-light-transparent-color);
@@ -393,30 +368,7 @@ a {
   margin-top: 1rem;
 }
 
-/* Contact layout */
-.contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  margin: 5rem auto;
-  max-width: 1200px;
-  padding: 0 1rem;
-}
 
-.contact form {
-  flex: 1 1 500px;
-}
-
-.contact-info-sidebar {
-  flex: 1 1 300px;
-}
-
-.contact-info-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  color: var(--dark-color);
-}
 
 /* Footer styling */
 .footer {

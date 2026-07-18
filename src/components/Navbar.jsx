@@ -2,6 +2,7 @@
 
 import React from "react";
 import { portfolioData } from "../data/portfolioData";
+import Link from "next/link";
 
 const Navbar = () => {
   const { personalInfo } = portfolioData;
@@ -10,21 +11,21 @@ const Navbar = () => {
     <div className="navbar-options-wrapper">
       <div className="navbar-options-container">
         <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          {personalInfo.name.split(" ")[0]} {/* Renders "Yagnik" as logo */}
+          {personalInfo.name.split(" ")[0]}
         </div>
         <div className="navbar-options">
-          <a href="#home" className="navbar-option">home</a>
-          <a href="#about" className="navbar-option">about</a>
-          <a href="#projects" className="navbar-option">projects</a>
-          <a href="#contact" className="navbar-option">contact</a>
-          <a
+          <Link href="#home" className="navbar-option">home</Link>
+          <Link href="#about" className="navbar-option">about</Link>
+          <Link href="#projects" className="navbar-option">projects</Link>
+          <Link href="#contact" className="navbar-option">contact</Link>
+          <Link
             href={personalInfo.resumeLink}
             target="_blank"
             rel="noopener noreferrer"
             className="uppercase see__my__work ml-m button primary-button"
           >
             Resume
-          </a>
+          </Link>
         </div>
       </div>
     </div>
